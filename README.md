@@ -48,74 +48,89 @@ Visit `http://localhost:3000` to view the website.
 │   ├── testimonials-section.tsx
 │   ├── contact-section.tsx
 │   └── footer.tsx
-├── config/               # Business configuration
-│   └── business-config.ts # Business details & settings
-├── public/               # Static assets
-│   ├── images/          # Website images
-│   └── favicon.ico
-└── lib/                 # Utilities and helpers
+├── config/               # Configuration files
+│   └── business-config.ts # Business information
+├── lib/                  # Utility functions
+├── public/              # Static assets
+└── uploads/             # Image uploads
 ```
 
-## ✏️ Making Updates
+## 🎨 Key Features
 
-### Updating Business Information
+- **Modern Design**: Clean, professional layout optimized for painting businesses
+- **Responsive**: Works perfectly on desktop, tablet, and mobile devices
+- **Fast Loading**: Optimized images and modern web technologies
+- **SEO Optimized**: Built-in SEO best practices for better search rankings
+- **Contact Forms**: Multiple ways for customers to get in touch
+- **Gallery**: Showcase your best painting projects
+- **Service Pages**: Detailed information about painting services
+- **Testimonials**: Customer reviews and feedback
+
+## 🛠️ Technology Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Styling**: Tailwind CSS + shadcn/ui components
+- **Language**: TypeScript
+- **Deployment**: Vercel (recommended)
+- **Forms**: React Hook Form with validation
+- **Icons**: Lucide React
+
+## 🔧 Configuration
+
+### Business Information
 Edit `config/business-config.ts` to update:
-- Business name and contact info
+- Company name and contact information
 - Services offered
-- Pricing information
+- Business hours
 - Social media links
+- Google Analytics ID
 
-### Adding New Photos
-1. Add optimized images to `public/images/`
-2. Update the gallery configuration in the relevant component
-3. Ensure images are web-optimized (WebP format recommended)
+### Environment Variables
+Copy `.env.example` to `.env.local` and configure:
+```bash
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
+EMAIL_FROM=noreply@yourdomain.com
+EMAIL_TO=info@yourdomain.com
+```
 
-### Updating Content
-- **Services**: Edit `components/services-section.tsx`
-- **About Section**: Edit `components/about-section.tsx`
-- **Testimonials**: Edit `components/testimonials-section.tsx`
-- **Contact Info**: Edit `config/business-config.ts`
+## 📸 Adding Photos
+
+1. Add high-quality images to the `uploads/` directory
+2. Update the gallery configuration in `components/gallery-section.tsx`
+3. Optimize images for web (recommended: WebP format, max 1920px width)
 
 ## 🚀 Deployment
 
-### Build for Production
-```bash
-npm run build
-npm start
-```
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Configure environment variables
+4. Deploy automatically on every push
 
-### Deploy to Vercel (Recommended)
-1. Connect your GitHub repository to Vercel
-2. Vercel will automatically deploy on every push to main branch
-3. Set up environment variables in Vercel dashboard
+### Other Platforms
+This Next.js application can be deployed to:
+- Netlify
+- AWS Amplify
+- DigitalOcean App Platform
+- Any Node.js hosting provider
 
-### Environment Variables
-Create `.env.local` file:
-```
-RESEND_API_KEY=your_resend_api_key
-CONTACT_EMAIL=your_business_email
-```
+## 📱 Mobile Optimization
 
-## 📧 Contact Form Setup
+The website is fully responsive and optimized for:
+- Mobile phones (320px+)
+- Tablets (768px+)
+- Desktop computers (1024px+)
+- Large screens (1440px+)
 
-The contact form uses Resend for email delivery. To set up:
-1. Sign up at [resend.com](https://resend.com)
-2. Get your API key
-3. Add `RESEND_API_KEY` to your environment variables
-4. Update `CONTACT_EMAIL` in environment variables
+## 🔍 SEO Features
 
-## 🔧 Maintenance
-
-### Regular Updates
-- Keep dependencies updated: `npm update`
-- Monitor website performance
-- Update business information as needed
-- Add new project photos regularly
-
-### Backup
-- This repository serves as your backup
-- All changes are version controlled with Git
-- Previous versions can be restored if needed
+- Semantic HTML structure
+- Meta tags and Open Graph
+- Structured data for local business
+- Optimized images with alt text
+- Fast loading times
+- Mobile-friendly design
 
 ## 📞 Support
 
